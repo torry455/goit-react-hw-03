@@ -1,6 +1,10 @@
 [
-    { "id": "id-1", "name": "Rosie Simpson", "number": "459-12-56" },
-    { "id": "id-2", "name": "Hermione Kline", "number": "443-89-12" },
-    { "id": "id-3", "name": "Eden Clements", "number": "645-17-79" },
-    { "id": "id-4", "name": "Annie Copeland", "number": "227-91-26" }
+    { "id": "id-1", "name": "Bang Cristopher Chan", "number": "459-12-56" },
+    { "id": "id-2", "name": "Seo Chang Bin", "number": "443-89-12" },
+    { "id": "id-3", "name": "Lee Min Ho", "number": "645-17-79" },
+    { "id": "id-4", "name": "Hwang Hyun Jin", "number": "443-89-12" },
+    { "id": "id-5", "name": "Han Ji Sung", "number": "672-77-09" },
+    { "id": "id-6", "name": "Kim Seung Min", "number": "423-29-62" },
+    { "id": "id-7", "name": "Yang Jeong In", "number": "125-15-59" },
+    { "id": "id-8", "name": "Lee Yong Bok", "number": "224-91-26" }
 ]

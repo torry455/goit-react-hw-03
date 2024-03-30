@@ -1,8 +1,9 @@
 .contactList {
-    list-style-type: none;
+    margin: 0 auto;
+    width: 1010px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 1200px;
-    gap: 20px;
-    font-size: 32px;
+    gap: 30px;
+    list-style-type: none;
 }

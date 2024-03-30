@@ -1,20 +1,35 @@
-import css from './Contact.module.css';
-import { FaUser, FaPhone } from 'react-icons/fa'; // Приклад використання Font Awesome іконок
+import PropTypes from "prop-types";
+import css from "./Contact.module.css";
+import { BsFillPersonFill, BsFillTelephoneFill } from "react-icons/bs";
 
-function Contact({ contactData }) {
+const Contact = ({ id, name, number, onDelete }) => {
   return (
-    <li className={css.contactItem}>
-      <div className={css.contactInfo}>
-        <div className={`${css.icon} ${css.userIcon}`}><FaUser /></div>
-        <p className={css.name}>{contactData.name}</p>
+    <li>
+      <div className={css.contactCard}>
+        <div>
+          <p className={css.cardText}>
+            <BsFillPersonFill className={css.cardIcon} />
+            {name}
+          </p>
+
+          <p className={css.cardText}>
+            <BsFillTelephoneFill className={css.cardIcon} />
+            {number}
+          </p>
+        </div>
+        <button className={css.contactCardBtn} onClick={() => onDelete(id)}>
+          Delete
+        </button>
       </div>
-      <div className={css.contactInfo}>
-        <div className={`${css.icon} ${css.phoneIcon}`}><FaPhone /></div>
-        <p className={css.number}>{contactData.number}</p>
-          </div>
-        <button className={css.deleteButton}>Delete</button>
     </li>
   );
-}
+};
+
+Contact.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
 
 export default Contact;

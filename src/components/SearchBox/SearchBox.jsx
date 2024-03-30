@@ -1,25 +1,27 @@
-import { useState } from 'react';
-import css from './SearchBox.module.css';
-import ContactList from '../ContactList/ContactList'; 
+import PropTypes from "prop-types";
+import css from "./SearchBox.module.css";
 
-const SearchBox = () => {
-    const [inputValue, setInputValue] = useState("");
+const SearchBox = ({ value, onFilter }) => {
+  return (
+    <div className={css.searchWrap}>
+      <label>
+        Find contact by name
+        <input
+          className={css.searchInput}
+          type="text"
+          name="search"
+          placeholder="Hwan Hyunjin"
+          value={value}
+          onChange={(e) => onFilter(e.target.value)}
+        />
+      </label>
+    </div>
+  );
+};
 
-    const handleChange = (evt) => {
-        setInputValue(evt.target.value);
-    };
-
-    return (
-        <div>
-            <p>Find contacts by name</p>
-            <input
-                className={css.searchBox}
-                type="text"
-                value={inputValue}
-                onChange={handleChange} />
-            <ContactList inputValue={inputValue} /> {/* Передача значення */}
-        </div>
-    )
+SearchBox.propTypes = {
+  value: PropTypes.string,
+  onFilter: PropTypes.func.isRequired,
 };
 
 export default SearchBox;
